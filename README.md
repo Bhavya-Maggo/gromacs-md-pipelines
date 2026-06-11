@@ -46,13 +46,13 @@ MD simulation of a two-chain protein–protein complex with per-chain and interf
 gromacs-md-pipelines/
 ├── README.md
 ├── protein-only/
-│   ├── md_pipeline.sh
+│   ├── protein_mds_gromacs.sh
 │   └── mdp_files/        ← see lysozyme tutorial link above
 ├── protein-ligand/
-│   ├── md_pipeline.sh
+│   ├── protein_lignad_mds_gromacs.sh
 │   └── mdp_files/        ← see protein-ligand tutorial link above
 └── protein-protein/
-    ├── md_pipeline.sh
+    ├── protein_protein_mds_gromacs.sh
     └── mdp_files/
         ├── ions.mdp
         ├── minim.mdp
