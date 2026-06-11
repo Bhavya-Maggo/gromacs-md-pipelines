@@ -1,0 +1,44 @@
+; NVT equilibration for protein–protein complex
+
+define = -DPOSRES
+
+integrator  = md
+dt          = 0.002
+nsteps      = 20000   ; 40 ps
+
+continuation         = no
+constraint_algorithm = lincs
+constraints          = h-bonds
+lincs_iter           = 1
+lincs_order          = 4
+
+cutoff-scheme = Verlet
+ns_type       = grid
+nstlist       = 20
+
+rvdw          = 1.2
+rvdw-switch   = 1.0
+vdw-modifier  = force-switch
+DispCorr      = EnerPres
+
+rcoulomb      = 1.2
+coulombtype   = PME
+pme_order     = 4
+fourierspacing= 0.16
+
+tcoupl  = V-rescale
+tc-grps = System
+tau_t   = 1.0
+ref_t   = 298
+
+pcoupl = no
+pbc    = xyz
+
+gen_vel  = yes
+gen_temp = 298
+gen_seed = -1
+
+nstxout   = 5000
+nstvout   = 0
+nstenergy = 1000
+nstlog    = 1000
