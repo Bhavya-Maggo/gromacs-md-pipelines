@@ -55,8 +55,8 @@ sed -i 's/UNL11/LIG/g' lig_charge.mol2
 
 # -- Step 4.4: Sort Bond Order --
 perl sort_mol2_bonds.pl lig_charge.mol2 lig_fix.mol2
-# IMPORTANT: In lig_fix.mol2, update the ligand name on the 2nd line
-#            after the @<TRIPOS>MOLECULE header to "LIG"
+# IMPORTANT: In lig_fix.mol2, update the ligand name on the 2nd line after the @<TRIPOS>MOLECULE header to "LIG"
+# Download sort_mol2_bonds.pl from http://www.mdtutorials.com/gmx/complex/Files/sort_mol2_bonds.txt
 
 # -- Step 4.5: Generate CGenFF Parameters --
 # Upload lig_fix.mol2 to https://cgenff.com/
